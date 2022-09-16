@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'cpf',
+        'phone',
+        'type',
+        'establishment_id',
     ];
 
     /**
@@ -41,4 +45,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function isManager(){
+      return $this->type== 'manager';
+    }
 }

@@ -5,17 +5,17 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Editar Perfil') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('user.update', $user->id) }}">
                         @csrf
-
+                        @method ('PUT')
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nome') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -26,10 +26,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Endereço de Email') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Login') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -43,21 +43,31 @@
                         <div class="row mb-3">
                             <label for="cpf" class="col-md-4 col-form-label text-md-end">{{ __('CPF') }}</label>
                             <div class="col-md-6">
-                            <input type="text" class="form-control" name="cpf" value="" id="cpf">
+                            <input type="text" class="form-control" id="cpf" name="cpf" value="{{ $user->cpf }}">
                           </div>
                         </div>
 
                           <div class="row mb-3">
                               <label for="cpf" class="col-md-4 col-form-label text-md-end">{{ __('Telefone') }}</label>
                               <div class="col-md-6">
-                              <input type="text" class="form-control" name="phone" value="" id="phone">
+                              <input type="text" class="form-control" id="phone" name="phone" value="{{ $user->phone }}">
                             </div>
                           </div>
                           <div class="row mb-3">
-                              <label for="cpf" class="col-md-4 col-form-label text-md-end">{{ __('Endereço') }}</label>
-                              <div class="col-md-6">
-                              <input type="text" class="form-control" name="address" value="" id="address">
-                            </div>
+                          <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Endereço') }}</label>
+                          <div class="col-md-6">
+                          <input type="text" class="form-control" id="address" name="address">
+                          </div>
+                          </div>
+                          <div class="row mb-3">
+                          <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Tipo') }}</label>
+
+                          <div class="col-md-6">
+                          <select class="form-control" name="type"  id="type">
+                          <option value="employee" @if ($user->type == 'employee')'selected'@endif>Funcionário</option>
+                          <option value="manager" @if ($user->type == 'manager')'selected'@endif>Gerente</option>
+                        </select>
+                          </div>
                           </div>
 
                         <div class="row mb-3">
@@ -81,58 +91,16 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-                        <div class="row mb-3">
-                        <select class="form-control" name="type" id="type">
-                          <option value="Manager">Gerente</option>
-                          <option value="Employee">Funcionário</option>
-                        </select>
-                      </div>
-
-                      <h1 class= "text-center">Dados da Empresa</h1>
-
-                      <div class="row g-3">
-                      <div class="col">
-                      <label class="form-label">CNPJ</label>
-                      <input type="text" class="form-control" id="cnpj">
-                      </div>
-                      <div class="col">
-                      <label class="form-label">Razão Social</label>
-                      <input type="text" class="form-control" id="social">
-                      </div>
-                      </div>
-
-                      <div class="row g-3">
-                        <div class="col">
-                          <label class="form-label">Telefone</label>
-                          <input type="text" class="form-control" id="">
-                        </div>
-                      </div>
-
-                      <div class="row g-3">
-                      <div class="col">
-                      <label class="form-label">Gerente Responsavel</label>
-                      <input type="text" class="form-control" id="">
-                      </div>
-                      <div class="col">
-                      <label class="form-label">Telefone</label>
-                      <input type="text" class="form-control" id="">
-                      </div>
-                      </div>
-
-                      <form class="row g-3">
-
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registro') }}
+                                    {{ __('Salvar') }}
                                 </button>
                             </div>
                         </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 @endsection

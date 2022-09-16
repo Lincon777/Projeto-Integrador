@@ -59,3 +59,8 @@ Route::get('/teste', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware('auth')->group(function() {
+  Route::resource('user', App\Http\Controllers\UserController::class);
+
+});
