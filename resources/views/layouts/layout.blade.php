@@ -17,9 +17,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" href="{{route('produtos')}}">Produtos</a>
+      <a class="nav-link active" aria-current="page" href="{{route('product.index')}}">Produtos</a>
       <a class="nav-link active" aria-current="page" href="{{route('pedidos')}}">Ver Pedidos</a>
-      <a class="nav-link active" aria-current="page" href="{{route('funcionarios')}}">Funcionários</a>
+      <a class="nav-link active" aria-current="page" href="{{route('user.index')}}">Funcionários</a>
       <a class="nav-link active" aria-current="page" href="{{route('dadosempresa')}}">Dados da Empresa</a>
     </div>
     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent"> <div class="">

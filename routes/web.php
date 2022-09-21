@@ -40,15 +40,12 @@ Route::get('/dadosempresa', function () {
 Route::get('/editarcardapio', function () {
     return view('editarcardapio');
 });
-Route::get('/funcionarios', function () {
-    return view('funcionarios');
-})->name ('funcionarios');
-Route::get('/login2', function () {
-    return view('login2');
-})->name ('login2');
-Route::get('/produtos', function () {
-    return view('produtos');
-})->name ('produtos');
+// Route::get('/login2', function () {
+//     return view('login2');
+// })->name ('login2');
+// Route::get('/produtos', function () {
+//     return view('produtos');
+// })->name ('produtos');
 Route::get('/telainicial', function () {
     return view('telainicial');
 });
@@ -62,5 +59,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('auth')->group(function() {
   Route::resource('user', App\Http\Controllers\UserController::class);
-
+});
+Route::middleware('auth')->group(function() {
+  Route::resource('product', App\Http\Controllers\ProductController::class);
 });

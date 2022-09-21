@@ -6,16 +6,15 @@
 
 <h3>Funcionários</h3>
 <div  class="d-flex justify-content-end">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+  <a type="button" class="btn btn-primary" href="{{ route ('user.create')}}">
 Criar Novo
-</button>
+</a>
+  <!-- <button type="button" class="btn btn-primary" hrefdata-bs-toggle="modal" data-bs-target="#exampleModal" >
+Criar Novo
+</button> -->
 </div>
-
-
-
-
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -75,7 +74,7 @@ Criar Novo
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <table class="table">
@@ -104,7 +103,13 @@ Criar Novo
       <td>{{$user->email}}</td>
       <td>{{$user->type}}</td>
       <td><a class="btn btn-primary" href="{{ route('user.edit',$user->id) }}"><i class="bi bi-pencil-square"></i></a></td>
-      <td><a class="btn btn-danger" href="{{ route('user.destroy',$user->id) }}" ><i class="bi bi-trash-fill"></i></a></td>
+      <td><form method="POST" action="{{ route('user.destroy', $user->id) }}">
+          @csrf
+          @method ('delete')
+          <button type="submit" class="btn btn-danger">
+      <i class="bi bi-trash3-fill"></i>
+      </button>
+      </form></td>
     </tr>
     @endforeach
   </tbody>

@@ -24,16 +24,7 @@ class UserController extends Controller
      */
     public function create(User $user)
     {
-      $data = $request->all();
-      return view('users.create')([
-      'name' => $data['name'],
-      'email' => $data['email'],
-      'cpf'=>$data['cpf'],
-      'phone'=>$data['phone'],
-      'adress'=>$data['adress'],
-      'type'=>$data['type'],
-      'password' => Hash::make($data['password'])
-    ]);
+      return view('users.create');
 
     }
 
@@ -48,7 +39,13 @@ class UserController extends Controller
       $data = $request -> all();
       $data['password']= \Hash::make($data['password']);
       User::create($data);
-
+      // 'name' => $data['name'],
+      // 'email' => $data['email'],
+      // 'cpf'=>$data['cpf'],
+      // 'phone'=>$data['phone'],
+      // 'adress'=>$data['adress'],
+      // 'type'=>$data['type'],
+      // 'password' => Hash::make($data['password'])
       return redirect ()->route('user.index');
     }
 

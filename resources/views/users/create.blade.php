@@ -61,8 +61,8 @@
                           </div>
                           <div class="row mb-3">
                           <select class="form-control" name="type" id="type">
-                            <option value="manager">Gerente</option>
-                            <option value="imployee">Funcionário</option>
+                            <option value="Manager">Gerente</option>
+                            <option value="Employee">Funcionário</option>
                           </select>
                         </div>
 
