@@ -14,18 +14,18 @@
       <div class="row g-3">
         <div class="col">
           <label class="form-label">Nome </label>
-          <input type="text" class="form-control" name="name" id="name">
+          <input type="text" class="form-control" name="name" id="name" value="{{$product->name}}">
         </div>
 
           <div class="col">
             <label class="form-label">Preço </label>
-            <input type="text" class="form-control" name="price_cents" id="price_cents">
+            <input type="text" class="form-control" name="price_cents" id="price_cents" value="{{$product->price_cents}}">
           </div>
 
           <div class="row g-3">
         <div class="col">
           <label class="form-label">Descrição</label>
-          <input type="text" class="form-control" name="description" id="description">
+          <input type="text" class="form-control" name="description" id="description" value="{{$product->description}}">
           </div>
           </div>
 
@@ -33,7 +33,7 @@
         <div class="col">
           <label class="form-label">Disponível</label>
           <div class="form-check form-switch">
-            <select class="form-control" name="is_available">
+            <select class="form-control" name="is_available" value="{{$product->is_available}}">
               <option value="1">Disponível</option>
               <option value="0">Indisponível</option>
             </select>

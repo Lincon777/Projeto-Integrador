@@ -85,8 +85,8 @@
       <td>{{$product->description}}</td>
       <td>{{$product->price_cents}}</td>
       <td>{{$product->is_available}}</td>
-      <td><a class="btn btn-primary" href="{{ route('product.edit',$product->id) }}"><i class="bi bi-info-circle"></i></a></td>
-      <td><a class="btn btn-warning" href="{{ route('product.show',$product->id) }}"><i class="bi bi-pencil-square"></i></a></td>
+      <td><a class="btn btn-primary" href="{{ route('product.show',$product->id) }}"><i class="bi bi-info-circle"></i></a></td>
+      <td><a class="btn btn-warning" href="{{ route('product.edit',$product->id) }}"><i class="bi bi-pencil-square"></i></a></td>
       <td><form method="POST" action="{{ route('product.destroy', $product->id) }}">
           @csrf
           @method ('delete')
