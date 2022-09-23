@@ -96,15 +96,15 @@
                       <input type="text" class="form-control" id="cnpj">
                       </div>
                       <div class="col">
-                      <label class="form-label">Razão Social</label>
-                      <input type="text" class="form-control" id="social">
+                      <label class="form-label">Nome Fantasia</label>
+                      <input type="text" class="form-control" id="trading_name">
                       </div>
                       </div>
 
                       <div class="row g-3">
                         <div class="col">
-                          <label class="form-label">Telefone</label>
-                          <input type="text" class="form-control" id="">
+                          <label class="form-label">Razão Social</label>
+                          <input type="text" class="form-control" id="company_name">
                         </div>
                       </div>
 
