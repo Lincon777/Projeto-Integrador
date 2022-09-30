@@ -19,7 +19,7 @@
         <a class="nav-link active" aria-current="page" href="{{route('cardapios')}}">Cardápios</a>
       <a class="nav-link active" aria-current="page" href="{{route('product.index')}}">Produtos</a>
       <a class="nav-link active" aria-current="page" href="{{route('pedidos')}}">Ver Pedidos</a>
-      <a class="nav-link active" aria-current="page" href="{{route('user.index')}}">Funcionários</a>
+      <a class="nav-link active" aria-current="page" href="{{route('user.index')}}">Membros</a>
       <a class="nav-link active" aria-current="page" href="{{route('dadosempresa')}}">Dados da Empresa</a>
     </div>
     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent"> <div class="">
@@ -66,7 +66,8 @@
   </div>
 </div>
 </nav>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 @yield('conteudo')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
   </body>
 </html>

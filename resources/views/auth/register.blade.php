@@ -108,21 +108,10 @@
                         </div>
                       </div>
 
-                      <div class="row g-3">
-                      <div class="col">
-                      <label class="form-label">Gerente Responsavel</label>
-                      <input type="text" class="form-control" id="">
-                      </div>
-                      <div class="col">
-                      <label class="form-label">Telefone</label>
-                      <input type="text" class="form-control" id="">
-                      </div>
-                      </div>
-
                       <form class="row g-3">
 
                         <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="d-grid gap-2 col-6 mx-auto">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Registro') }}
                                 </button>

@@ -1,6 +1,6 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('layouts.layout')
+@section('titulo')
+  @section('conteudo')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -44,6 +44,11 @@
                             <label for="cpf" class="col-md-4 col-form-label text-md-end">{{ __('CPF') }}</label>
                             <div class="col-md-6">
                             <input type="text" class="form-control" id="cpf" name="cpf" value="">
+                            @error('cpf')
+                            <div class+"text-danger">
+                              {{ $message }}
+                            </div>
+                            @enderror
                           </div>
                         </div>
 
@@ -51,12 +56,22 @@
                               <label for="cpf" class="col-md-4 col-form-label text-md-end">{{ __('Telefone') }}</label>
                               <div class="col-md-6">
                               <input type="text" class="form-control" id="phone" name="phone" value="">
+                              @error('phone')
+                              <div class+"text-danger">
+                                {{ $message }}
+                              </div>
+                              @enderror
                             </div>
                           </div>
                           <div class="row mb-3">
                           <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Endereço') }}</label>
                           <div class="col-md-6">
                           <input type="text" class="form-control" id="address" name="address">
+                          @error('address')
+                          <div class+"text-danger">
+                            {{ $message }}
+                          </div>
+                          @enderror
                           </div>
                           </div>
                           <div class="row mb-3">

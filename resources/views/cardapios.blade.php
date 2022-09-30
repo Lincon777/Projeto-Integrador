@@ -54,29 +54,6 @@ Criar novo cardápio
       <td><button type="button" class="btn btn-danger"><img src="lixeira.png" alt=""></button></td>
 
     </tr>
-    <tr>
-      <th scope="row">Cardápio Burgues</th>
-      <td>13/07/2022</td>
-      <td><div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-</div></td>
-      <td><button type="button" class="btn btn-primary"><img src="editar.png" alt=""></button></td>
-      <td><button type="button" class="btn btn-danger"><img src="lixeira.png" alt=""></button></td>
-
-    </tr>
-    <tr>
-      <th scope="row">Cardápio Zap</th>
-      <td>13/07/2022</td>
-      <td><div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-</div></td>
-<td><button type="button" class="btn btn-primary"><img src="editar.png" alt=""></button></td>
-      <td><button type="button" class="btn btn-danger"><img src="lixeira.png" alt=""></button></td>
-
-
-
-    </tr>
-
   </tbody>
 </table>
 </div>

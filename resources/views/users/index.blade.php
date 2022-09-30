@@ -4,7 +4,7 @@
       <div class="container">
 
 
-<h3>Funcionários</h3>
+<h3>Contratados</h3>
 <div  class="d-flex justify-content-end">
   <a type="button" class="btn btn-primary" href="{{ route ('user.create')}}">
 Criar Novo

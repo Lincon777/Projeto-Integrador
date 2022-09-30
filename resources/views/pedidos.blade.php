@@ -29,41 +29,8 @@
             <td>...</td>
             <td><button type="button" class="btn btn-warning"><img src="info.png" alt=""></button></td>
               <td><button type="button" class="btn btn-primary"><img src="editar.png" alt=""></td>
-
           </tr>
-          <tr>
-            <th scope="row">2 </th>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td><button type="button" class="btn btn-warning"><img src="info.png" alt=""></button></td>
-              <td><button type="button" class="btn btn-primary"><img src="editar.png" alt=""></td>
 
-
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-<td>...</td>
-            <td><button type="button" class="btn btn-warning"><img src="info.png" alt=""></button></td>
-              <td><button type="button" class="btn btn-primary"><img src="editar.png" alt=""></td>
-
-
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td><button type="button" class="btn btn-warning"><img src="info.png" alt=""></button></td>
-              <td><button type="button" class="btn btn-primary"><img src="editar.png" alt=""></td>
-
-
-          </tr>
         </tbody>
       </table>
 

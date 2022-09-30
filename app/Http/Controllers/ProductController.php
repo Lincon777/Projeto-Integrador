@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Http\Requests\ProductRequest;
 class ProductController extends Controller
 {
     /**
@@ -37,13 +38,34 @@ class ProductController extends Controller
     {
       $data=$request->all();
       $data['establishment_id']=\Auth::user()->establishment_id;
-      Product::create([
-        'name' => $data['name'],
-        'description' => $data['description'],
-        'price_cents'=>(int)($data['price_cents']*100),
-        'is_available'=>$data['is_available'],
-        'establishment_id'=>$data['establishment_id'],
-      ]);
+      // Product::create([
+      //   'name' => $data['name'],
+      //   'description' => $data['description'],
+      //   'price_cents'=>(int)($data['price_cents']*100),
+      //   'is_available'=>$data['is_available'],
+      //   'establishment_id'=>$data['establishment_id']
+      //     ]);
+
+$product=Product::create([
+  'name' => $data['name'],
+  'description' => $data['description'],
+  'price_cents'=>(int)($data['price_cents']*100),
+  'is_available'=>$data['is_available'],
+  'establishment_id'=>$data['establishment_id']
+    ]);
+
+        if ($request->hasFile('image')){
+          $imageFile = $request->file('image');
+
+          $imagePath = $imageFile->storeAs(
+            "images/products/$product->id",
+            "image.jpg",
+            "public"
+          );
+
+          $product->update(['image_path'=> $imagePath]);
+        }
+
 
       return redirect ()->route('product.index');
     }
@@ -77,9 +99,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(ProductRequest $request, Product $product)
     {
-        $data = $request->all();
+        $data = $request->validated();
       $product->update($data);
 
       return redirect ()->route('product.show',$product->id);

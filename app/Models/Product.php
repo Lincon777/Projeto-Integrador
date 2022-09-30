@@ -15,5 +15,6 @@ protected $fillable = [
     'price_cents',
     'is_available',
     'establishment_id',
+    'image_path'
 ];
 }

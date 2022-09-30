@@ -71,6 +71,7 @@
       <th scope="col">Descrição</th>
       <th scope="col">Preço</th>
       <th scope="col">Ativo</th>
+      <th scope="col">Imagem</th>
       <th scope="col">Ver</th>
       <th scope="col">Editar</th>
       <th scope="col">Remover</th>
@@ -85,6 +86,7 @@
       <td>{{$product->description}}</td>
       <td>{{$product->price_cents/100}}</td>
       <td>{{$product->is_available==0 ? 'Indisponível':'Disponível'}}</td>
+      <td><img src="{{asset('/storage/'.$product->image_path)}}" class="rounded mx-auto d-block" width="50" height="60"></td>
       <td><a class="btn btn-primary" href="{{ route('product.show',$product->id) }}"><i class="bi bi-info-circle"></i></a></td>
       <td><a class="btn btn-warning" href="{{ route('product.edit',$product->id) }}"><i class="bi bi-pencil-square"></i></a></td>
       <td><form method="POST" action="{{ route('product.destroy', $product->id) }}">
