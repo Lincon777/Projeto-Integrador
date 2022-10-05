@@ -1,7 +1,23 @@
 @extends('layouts.layout')
 @section('titulo')
   @section('conteudo')
-    <div class="container">
+  <ul class="list-group w-100">
+
+  <li class='list-group-item'><strong>Nome Fantasia:</strong>{{$establishment->trading_name}}</li>
+  <li class='list-group-item'><strong>CNPJ:</strong>{{$establishment->cnpj}}</li>
+  <li class='list-group-item'><strong>Razão Social:</strong>{{$establishment->company_name}}</li>
+  <li class='list-group-item'><strong>Endereço:</strong>{{$establishment->address}}</li>
+  <li class='list-group-item'><strong>Telefone:</strong>{{$establishment->phone}}</li>
+
+  <a type="button" class="btn btn-primary" href="{{ route ('establishment.edit')}}">
+  {{ __('Editar') }}
+  </a>
+  <a type="button" class="btn btn-warning" href="{{ route ('cardapio')}}">
+  {{ __('Voltar') }}
+  </a>
+
+  </ul>
+    <!-- <div class="container">
       <h1 class= "text-center">Dados da Empresa</h1>
       <div class="col">
         <label class="form-label">Nome Fantasia</label>
@@ -29,12 +45,6 @@
           <input type="text" class="form-control" id="company_phone" name="phone">
         </div>
       </div>
-      <button class="btn btn-primary" href="{{ route ('establishment.show',$establishment->id)}}">
-      {{ __('Ver') }}
-    </button>
-      <button class="btn btn-warning" href="{{ route ('establishment.edit',$establishment->id)}}">
-      {{ __('Editar') }}
-    </button>
 
-    </div>
+    </div> -->
 @endsection

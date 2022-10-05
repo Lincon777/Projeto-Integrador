@@ -71,7 +71,7 @@
       <th scope="col">Descrição</th>
       <th scope="col">Preço</th>
       <th scope="col">Ativo</th>
-      <th scope="col">Imagem</th>
+      <th scope="col">Produto</th>
       <th scope="col">Ver</th>
       <th scope="col">Editar</th>
       <th scope="col">Remover</th>

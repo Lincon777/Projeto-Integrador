@@ -7,7 +7,7 @@
 <h3>Contratados</h3>
 <div  class="d-flex justify-content-end">
   <a type="button" class="btn btn-primary" href="{{ route ('user.create')}}">
-Criar Novo
+Cadastrar novo Funcionário
 </a>
   <!-- <button type="button" class="btn btn-primary" hrefdata-bs-toggle="modal" data-bs-target="#exampleModal" >
 Criar Novo
@@ -40,7 +40,7 @@ Criar Novo
               <label class="form-label">Telefone</label>
               <input type="text" class="form-control" id="phone">
             </div>
-          </div>
+          </div>https://lincon.loca.lt/
 
         </div>
 
@@ -99,7 +99,7 @@ Criar Novo
       <th scope="row">{{$user->id}}</th>
       <td>{{$user->name}}</td>
       <td>{{$user->cpf}}</td>
-      <td>{{$user->adress}}</td>
+      <td>{{$user->address}}</td>
       <td>{{$user->phone}}</td>
       <td>{{$user->email}}</td>
       <td>{{$user->type}}</td>

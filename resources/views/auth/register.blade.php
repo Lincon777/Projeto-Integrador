@@ -93,18 +93,30 @@
                       <div class="row g-3">
                       <div class="col">
                       <label class="form-label">CNPJ</label>
-                      <input type="text" class="form-control" id="cnpj">
+                      <input type="text" class="form-control" name="cnpj" id="cnpj">
                       </div>
                       <div class="col">
                       <label class="form-label">Nome Fantasia</label>
-                      <input type="text" class="form-control" id="trading_name">
+                      <input type="text" class="form-control" name="trading_name" id="trading_name">
                       </div>
                       </div>
 
                       <div class="row g-3">
                         <div class="col">
                           <label class="form-label">Razão Social</label>
-                          <input type="text" class="form-control" id="company_name">
+                          <input type="text" class="form-control" name="company_name" id="company_name">
+                        </div>
+                      </div>
+
+                      <div class="row g-3">
+                        <div class="col">
+                          <label for="inputAddress" class="form-label">Endereço</label>
+                          <input type="text" class="form-control" name="company_address" id="company_address">
+                        </div>
+
+                        <div class="col">
+                          <label class="form-label">Telefone</label>
+                          <input type="text" class="form-control" name="company_phone" id="company_phone">
                         </div>
                       </div>
 
