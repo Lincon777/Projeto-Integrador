@@ -12,8 +12,16 @@ class Menu extends Model
 protected $fillable = [
     'name',
     'description',
-    'password',
     'is_active',
+    'created_at',
     'establishment_id',
 ];
+public function establishment()
+{
+  return this->belongsTo(Establishment::class);
+}
+public function products()
+{
+  return $this->belongsToMany(Product::class);
+}
 }

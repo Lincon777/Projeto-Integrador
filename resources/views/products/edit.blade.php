@@ -48,7 +48,7 @@
         <div class="col">
           <label class="form-label">Disponível</label>
           <div class="form-check form-switch">
-            <select class="form-control" name="is_available" id='description' value="{{$product->is_available}}">
+            <select class="form-control" name="is_available" id='is_available' value="{{$product->is_available}}">
               <option value="1" @if ($product->is_available=='1')'selected'@endif>Disponível</option>
               <option value="0" @if ($product->is_available=='0')'selected'@endif>Indisponível</option>
             </select>

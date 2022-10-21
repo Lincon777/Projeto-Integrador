@@ -8,11 +8,7 @@
   <li class='list-group-item'><strong>Razão Social:</strong>{{$establishment->company_name}}</li>
   <li class='list-group-item'><strong>Endereço:</strong>{{$establishment->address}}</li>
   <li class='list-group-item'><strong>Telefone:</strong>{{$establishment->phone}}</li>
-
-  <a type="button" class="btn btn-primary" href="{{ route ('establishment.edit')}}">
-  {{ __('Editar') }}
-  </a>
-  <a type="button" class="btn btn-warning" href="{{ route ('cardapio')}}">
+  <a type="button" class="btn btn-warning" href="{{ route ('establishment.index')}}">
   {{ __('Voltar') }}
   </a>
 

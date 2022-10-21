@@ -1,14 +1,14 @@
-@extends('layouts.layout')
-@section('titulo')
-  @section('conteudo')
-  div class="container">
+@extends('layouts.app')
+
+@section('content')
+  <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-8">
               <div class="card">
                   <div class="card-header">{{ __('Editar Empresa') }}</div>
 
                   <div class="card-body">
-                      <form method="POST" action="{{ route('establishment.update', $user->id) }}">
+                      <form method="POST" action="{{ route('establishment.update', $establishment->id) }}" enctype="multipart/form-data">
                           @csrf
                           @method ('PUT')
       <div class="col">
@@ -29,14 +29,22 @@
       <div class="row g-3">
         <div class="col">
           <label for="inputAddress" class="form-label">Endereço</label>
-          <input type="text" class="form-control" id="company_address" name='adress' value="{{ $establishment->company_address}}">
+          <input type="text" class="form-control" id="company_address" name='address' value="{{ $establishment->address}}">
         </div>
 
         <div class="col">
           <label class="form-label">Telefone</label>
-          <input type="text" class="form-control" id="company_phone" name="phone" value="{{ $establishment->company_phone}}">
+          <input type="text" class="form-control" id="company_phone" name="phone" value="{{ $establishment->phone}}">
         </div>
       </div>
-
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-warning">
+        {{ __('Salvar') }}
+      </button>
+      </div>
     </div>
+  </div>
+  </div>
+  </div>
+  </div>
 @endsection

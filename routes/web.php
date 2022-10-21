@@ -16,42 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/pedidos', function () {
-    return view('pedidos');
-})->name ('pedidos');
-Route::get('/cadastroemp', function () {
-    return view('cadastroemp');
-})->name ('cadastroemp');
-Route::get('/cadastrofunc', function () {
-    return view('cadastrofunc');
-});
-Route::get('/cardapio', function () {
-    return view('cardapio');
-})->name ('cardapio');
-Route::get('/cardapios', function () {
-    return view('cardapios');
-})->name ('cardapios');
-Route::get('/criarproduto', function () {
-    return view('criarproduto');
-});
-Route::get('/dadosempresa', function () {
-    return view('dadosempresa');
-})->name ('dadosempresa');
-Route::get('/editarcardapio', function () {
-    return view('editarcardapio');
-});
-// Route::get('/login2', function () {
-//     return view('login2');
-// })->name ('login2');
-// Route::get('/produtos', function () {
-//     return view('produtos');
-// })->name ('produtos');
-Route::get('/telainicial', function () {
-    return view('telainicial');
-});
-Route::get('/teste', function () {
-    return view('teste');
-});
+// Route::get('/dadosempresa/{establishment_id}','App\Http\Controllers\EstablishmentController@show')->name('dadosempresa');
+// Route::get('/dadosempresa/{establishment_id}','App\Http\Controllers\EstablishmentController@edit')->name('dadosempresa');
+//
+// Route::post('/establishment.update/{establishment_id}','App\Http\Controllers\EstablishmentController@update')->name('update');
+
 
 Auth::routes();
 
@@ -59,10 +28,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('auth')->group(function() {
   Route::resource('user', App\Http\Controllers\UserController::class);
-});
-Route::middleware('auth')->group(function() {
+
   Route::resource('product', App\Http\Controllers\ProductController::class);
+
+  Route::resource('establishment', App\Http\Controllers\EstablishmentController::class);
+
+  Route::resource('menu', App\Http\Controllers\MenuController::class);
+
+  Route::resource('menu.product', App\Http\Controllers\MenuProductController::class)
+  ->only(['store', 'destroy']);
 });
-Route::middleware('auth')->group(function() {
-  Route::resource('establishment', App\Http\Controllers\establishmentController::class);
-});
+  Route::get('/cardapio/{menu}','App\Http\Controllers\MenuController@showPublic')->name('menu.public.show');

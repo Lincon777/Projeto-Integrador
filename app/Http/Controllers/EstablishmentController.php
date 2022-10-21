@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Establishment;
+use App\Http\Requests\EstablishmentRequest;
 class EstablishmentController extends Controller
 {
     /**
@@ -11,11 +12,11 @@ class EstablishmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function index()
-    // {
-    //     $establishment=Establishment::all();
-    //     return view ('establishment.index',['establishments'=$establishments])
-    // }
+    public function index()
+    {
+        $establishments=Establishment::where('id',\Auth::User()->establishment_id)->get();
+        return view ('establishments.index',['establishments'=>$establishments]);
+    }
 
     // /**
     //  * Show the form for creating a new resource.
@@ -46,7 +47,7 @@ class EstablishmentController extends Controller
     //  */
     public function show(Establishment $establishment)
     {
-        return view ('establishment.show',['establishment'=>$establishment]);
+        return view ('establishments.show',['establishment'=>$establishment]);
     }
 
     /**
@@ -57,7 +58,7 @@ class EstablishmentController extends Controller
      */
     public function edit(Establishment $establishment)
     {
-        return view ('establishment.edit',['establishment'=>$establishment]);
+        return view ('establishments.edit',['establishment'=>$establishment]);
     }
 
     /**
@@ -67,9 +68,9 @@ class EstablishmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Establishment $establishment)
+    public function update(EstablishmentRequest $request, Establishment $establishment)
     {
-      $data = $request->validated();
+      $data = $request->all();
     $establishment->update($data);
 
     return redirect ()->route('establishment.show',$establishment->id);
