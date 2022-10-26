@@ -44,6 +44,7 @@ class MenuController extends Controller
     {
         $data=$request->all();
         // $data['establishment_id']=\Auth::user()->establishment_id;
+
           Menu::create([
             'name'=>$data['name'],
             'establishment_id'=>\Auth::user()->establishment_id,
@@ -89,9 +90,8 @@ class MenuController extends Controller
      */
     public function update(MenuRequest $request, Menu $menu)
     {
-      $data = $request->validated();
 
-      $data['is_active']=($data['is_active']?? '')=='on';
+      $data = $request->validated();
 
       $menu->update($data);
 

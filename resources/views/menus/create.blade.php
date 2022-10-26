@@ -37,9 +37,9 @@
                                 <div class="col">
                                   <label class="form-label">Disponibilidade</label>
                                   <div class="form-check form-switch">
-                          <select class="form-control" name="is_active">
-                            <option value="1">Disponível</option>
+                          <select class="form-control" name="is_active" id='is_active'>
                             <option value="0">Indisponível</option>
+                            <option value="1">Disponível</option>
                           </select>
                               </div>
                               </div>

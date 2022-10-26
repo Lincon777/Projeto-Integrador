@@ -40,8 +40,8 @@
           <label class="form-label">Disponível</label>
           <div class="form-check form-switch">
             <select class="form-control" name="is_active" id='is_active' value="{{$menu->is_active}}">
-              <option value="0" @if ($menu->is_active=='0')'selected'@endif>Indisponível</option>
-              <option value="1" @if ($menu->is_active=='1')'selected'@endif>Disponível</option>
+              <option value="0" @if ($menu->is_active)'selected'@endif>Indisponível</option>
+              <option value="1" @if ($menu->is_active)'selected'@endif>Disponível</option>
             </select>
       </div>
       </div>

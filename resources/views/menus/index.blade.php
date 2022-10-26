@@ -17,6 +17,7 @@ Criar Cardápio
       <th scope="col">Descrição</th>
       <th scope="col">Data de Criação</th>
       <th scope="col">Ativo</th>
+      <th scope="col">Cardápio</th>
       <th scope="col">Ver</th>
       <th scope="col">Editar</th>
       <th scope="col">Remover</th>
@@ -30,7 +31,8 @@ Criar Cardápio
       <td>{{$menu->name}}</td>
       <td>{{$menu->description}}</td>
       <td>{{$menu->created_at}}</td>
-      <td>{{$menu->is_active==0 ? 'Indisponível':'Disponível'}}</td>
+      <td>{{$menu->is_active ? 'Disponível':'Indisponível'}}</td>
+      <td><a class="btn btn-info" href="{{route('menu.public.show',$menu->id)}}"><i class="bi bi-list"></i></a></td>
       <td><a class="btn btn-primary" href="{{ route('menu.show',$menu->id) }}"><i class="bi bi-info-circle"></i></a></td>
       <td><a class="btn btn-warning" href="{{ route('menu.edit',$menu->id) }}"><i class="bi bi-pencil-square"></i></a></td>
       <td><form method="POST" action="{{ route('menu.destroy', $menu->id) }}">

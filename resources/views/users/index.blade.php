@@ -102,7 +102,7 @@ Criar Novo
       <td>{{$user->address}}</td>
       <td>{{$user->phone}}</td>
       <td>{{$user->email}}</td>
-      <td>{{$user->type}}</td>
+      <td>{{$user->isManager() ? 'Gerente':'Funcionário'}}</td>
       <td><a class="btn btn-primary" href="{{ route('user.show',$user->id) }}"><i class="bi bi-info-circle"></i></a></td>
       <td><a class="btn btn-warning" href="{{ route('user.edit',$user->id) }}"><i class="bi bi-pencil-square"></i></a></td>
       <td><form method="POST" action="{{ route('user.destroy', $user->id) }}">

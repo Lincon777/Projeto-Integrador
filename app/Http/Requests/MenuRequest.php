@@ -25,7 +25,8 @@ class MenuRequest extends FormRequest
     {
         return [
           'name'=> 'required|string|min:2|max:50',
-          'description'=> 'required|string|min:10|max:255'
+          'description'=> 'required|string|min:10|max:255',
+          'is_active'=>'nullable'
         ];
     }
 }

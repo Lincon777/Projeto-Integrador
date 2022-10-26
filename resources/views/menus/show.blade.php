@@ -11,7 +11,7 @@
       <ul class="list-group w-100">
 <li class='list-group-item'><strong>Nome:</strong>{{$menu->name}}</li>
 <li class='list-group-item'><strong>Descrição:</strong>{{$menu->description}}</li>
-<li class='list-group-item'><strong>Ativo:</strong>{{$menu->is_active ? 'Indisponível':'Disponível'}}</li>
+<li class='list-group-item'><strong>Ativo:</strong>{{$menu->is_active ? 'Disponível':'Indisponível'}}</li>
 </ul>
 </div>
 <div class="d-inline-flex p-2">
@@ -52,7 +52,7 @@
     <li class='list-group-item'><strong>Nome:</strong>{{$product->name}}</li>
     <li class='list-group-item'><strong>Descrição:</strong>{{$product->description}}</li>
     <li class='list-group-item'><strong>Preço:</strong>{{$product->price_cents/100}}</li>
-    <li class='list-group-item'><strong>Ativo:</strong>{{$product->is_available ? 'Indisponível':'Disponível'}}</li>
+    <li class='list-group-item'><strong>Ativo:</strong>{{$product->is_available ? 'Disponível':'Indisponível'}}</li>
     </ul>
       <div class="btn-group" role="group" aria-label="Basic example">
         <form action="{{route('menu.product.destroy', [$menu->id , $product->id])}}" method="post">
