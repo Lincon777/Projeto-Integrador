@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header"><h5>{{ __('Registro') }}</h5></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -82,11 +82,15 @@
                             </div>
                         </div>
                         <div class="row mb-3">
+                        <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Tipo') }}</label>
+
+                        <div class="col-md-6">
                         <select class="form-control" name="type" id="type">
-                          <option value="Manager">Gerente</option>
-                          <option value="Employee">Funcionário</option>
+                          <option value="manager">Gerente</option>
+                          <option value="employee">Funcionário</option>
                         </select>
                       </div>
+                    </div>
 
                       <h1 class= "text-center">Dados da Empresa</h1>
 

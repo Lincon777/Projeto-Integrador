@@ -4,7 +4,7 @@
     <div class="container">
 
 
-    <h3>Produtos</h3>
+    <h1 class= "text-center">Produtos</h1>
     <div  class="d-flex justify-content-end">
       <a type="button" class="btn btn-primary" href="{{ route ('product.create')}}">
     Adicionar Produto
@@ -66,7 +66,7 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
+      <!-- <th scope="col">ID</th> -->
       <th scope="col">Produto</th>
       <th scope="col">Descrição</th>
       <th scope="col">Preço</th>
@@ -81,7 +81,7 @@
   <tbody>
     @foreach ($products as $product)
     <tr>
-      <th scope="row">{{$product->id}}</th>
+      <!-- <th scope="row">{{$product->id}}</th> -->
       <td>{{$product->name}}</td>
       <td>{{$product->description}}</td>
       <td>{{$product->price_cents/100}}</td>

@@ -5,7 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Acesso a Conta') }}</div>
+                <div class="card-header"><h5>{{ __('Acesso a Conta') }}</h5></div>
+
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

@@ -29,7 +29,7 @@ class UserRequest extends FormRequest
         'password'=> 'required|min:8|',
         'phone'=> 'nullable',
         'address'=> 'required|string|min:8',
-        'cpf'=> 'required|string|min:11',
+        'cpf'=> 'required|string|min:11|unique:users',
         'type'=>'nullable'
         ];
     }

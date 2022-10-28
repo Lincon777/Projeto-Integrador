@@ -2,7 +2,7 @@
 @section('titulo')
   @section('conteudo')
 <div class="container">
-<h3>Gerenciamento de Cardápios</h3>
+<h1 class= "text-center">Cardápios</h1>
 <div  class="d-flex justify-content-end">
   <a type="button" class="btn btn-primary" href="{{ route ('menu.create')}}">
 Criar Cardápio
@@ -12,7 +12,7 @@ Criar Cardápio
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID </th>
+      <!-- <th scope="col">ID </th> -->
       <th scope="col">Nome</th>
       <th scope="col">Descrição</th>
       <th scope="col">Data de Criação</th>
@@ -27,7 +27,7 @@ Criar Cardápio
   <tbody>
     @foreach ($menus as $menu)
     <tr>
-      <th scope="row">{{$menu->id}}</th>
+      <!-- <th scope="row">{{$menu->id}}</th> -->
       <td>{{$menu->name}}</td>
       <td>{{$menu->description}}</td>
       <td>{{$menu->created_at}}</td>

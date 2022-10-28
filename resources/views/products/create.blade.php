@@ -1,12 +1,11 @@
-
-@extends('layouts.app')
-
-@section('content')
+@extends('layouts.layout')
+@section('titulo')
+  @section('conteudo')
     <div class="container">
           <div class="row justify-content-center">
               <div class="col-md-8">
                   <div class="card">
-                      <div class="card-header">{{ __('Adicionar Produto') }}</div>
+                      <div class="card-header"><h3>{{ __('Adicionar Produto') }}</h3></div>
 
                       <div class="card-body">
                           <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data">

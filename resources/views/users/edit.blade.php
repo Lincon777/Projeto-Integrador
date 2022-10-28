@@ -66,7 +66,7 @@
                           <div class="row mb-3">
                           <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Endereço') }}</label>
                           <div class="col-md-6">
-                          <input type="text" class="form-control" id="address" name="address">
+                          <input type="text" class="form-control" id="address" name="address" value="{{ $user->address }}">
                           @error('adress')
                           <div class+"text-danger">
                             {{ $message }}

@@ -4,7 +4,7 @@
       <div class="container">
 
 
-<h3>Contratados</h3>
+<h1 class= "text-center">Contratados</h1>
 <div  class="d-flex justify-content-end">
   <a type="button" class="btn btn-primary" href="{{ route ('user.create')}}">
 Cadastrar novo Funcionário
@@ -80,7 +80,7 @@ Criar Novo
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID </th>
+      <!-- <th scope="col">ID </th> -->
       <th scope="col">Nome </th>
       <th scope="col">CPF</th>
       <th scope="col">Endereço</th>
@@ -96,7 +96,7 @@ Criar Novo
     @foreach($users as $user)
 
     <tr>
-      <th scope="row">{{$user->id}}</th>
+      <!-- <th scope="row">{{$user->id}}</th> -->
       <td>{{$user->name}}</td>
       <td>{{$user->cpf}}</td>
       <td>{{$user->address}}</td>
