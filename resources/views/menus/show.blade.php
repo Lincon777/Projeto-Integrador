@@ -35,8 +35,8 @@
 
   </form>
 </div>
-<img src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl={{urlencode(route('menu.public.show', $menu->id))}}" >
-<h5>Link Compartilhavel</h5>
+<h1 class= "text-center">QR Code</h1>
+<div class= "text-center"><img src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl={{urlencode(route('menu.public.show', $menu->id))}}"></div>
 
     <div class="text-center">
       <a href="{{route('menu.public.show',$menu->id)}}">Link do Cardápio Público</a>

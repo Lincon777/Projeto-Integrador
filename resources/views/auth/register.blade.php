@@ -5,8 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h5>{{ __('Registro') }}</h5></div>
-
+                <div class="card-header"><h1 class= "text-center">Registro</h1></div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -82,7 +81,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                        <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Tipo') }}</label>
+                        <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Função') }}</label>
 
                         <div class="col-md-6">
                         <select class="form-control" name="type" id="type">
@@ -92,7 +91,7 @@
                       </div>
                     </div>
 
-                      <h1 class= "text-center">Dados da Empresa</h1>
+                      <div class="card-header"><h1 class= "text-center">Dados da Empresa</h1></div>
 
                       <div class="row g-3">
                       <div class="col">
